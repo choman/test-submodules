@@ -1,0 +1,21 @@
+---
+version: '3'
+
+includes:
+   pip:
+     taskfile: buildtools/taskfiles/pip.yml
+     optional: true
+
+tasks:
+
+   submodule:init:
+     desc: init submodules
+     cmds:
+       - cmd: git submodule init
+       - cmd: git submodule update
+
+   init:
+     desc: init
+     cmds:
+       - echo "hello"
+   
